@@ -1,6 +1,6 @@
 version: '3'
 services:
   
-  amplify:
-    image: webapp:latest
+  web-app:
+    image: webapp
     build: ./
