@@ -1,0 +1,75 @@
+:root {
+    --blue: #0077b6;
+    --white: #ffffff;
+  }
+  
+  * {
+    font-family: "Lato", sans-serif;
+    background-color: #f1faee;
+    text-align: center;
+  }
+  
+  div.App {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  div.App span.message{
+    margin: 2em;
+    font-size: 1.5em;
+  }
+  
+  div.App-container {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  div.App input[type="file"] {
+    display: none;
+  }
+  
+  div.App button {
+    margin: 0px 1em;
+  }
+  
+  div.App .custom-upload {
+    border-radius: 15px;
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    height: 3em;
+  }
+  
+  div.App .button {
+    align-items: center;
+    display: flex;
+    border: 1px solid;
+  }
+  
+  div.App .send {
+    border-radius: 10px;
+    color: #335c67;
+    border: 1px solid #335c67;
+    padding: 6px 12px;
+  }
+  
+  div.App label {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    border: 1px solid;
+  }
+  
+  .App-header {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 1em;
+    margin: 0;
+  }
