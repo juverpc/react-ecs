@@ -24,4 +24,9 @@ provider:
 plugins:
   - serverless-deployment-bucket
 
-
+resources:
+  Resources:
+    appconfig-test-serverless:
+      Type: AWS::AppConfig::Application
+      Properties:
+        Name: "appconfig-test-serverless"
