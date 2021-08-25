@@ -13,10 +13,13 @@ phases:
       - chmod +x push_ecr.sh
   build:  
     commands:
-      - docker-compose build
-      - ./tag.sh
+      - docker build -t webapp .
+      - docker tag webapp:latest 624733648801.dkr.ecr.us-east-1.amazonaws.com/webapp:latest
+      - docker push 624733648801.dkr.ecr.us-east-1.amazonaws.com/webapp:latest
+      # - docker-compose build
+      # - ./tag.sh
       #- docker images | grep webapp
          
   post_build:
     commands:
-      - ./push_ecr.sh
+      # - ./push_ecr.sh
