@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM public.ecr.aws/bacardi/alpine:3.13.0
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./

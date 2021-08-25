@@ -2,5 +2,5 @@ version: '3'
 services:
   
   web-app:
-    image: webapp
+    image: webapp:latest
     build: ./
