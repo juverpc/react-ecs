@@ -8,10 +8,10 @@ provider:
   # lambdaHashingVersion: 20201221
   # iam:
   #   role: arn:aws:iam::624733648801:role/Role-serverless-function
-  # deploymentBucket:
-  #   name: codebuildjuver
-  #   serverSideEncryption: AES256
-  #deploymentPrefix: serverless/example
+   deploymentBucket:
+     name: codebuildjuver
+     serverSideEncryption: AES256
+  deploymentPrefix: serverless/example
   ecr:
     # In this section you can define images that will be built locally and uploaded to ECR
     # scanOnPush: true
