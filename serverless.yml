@@ -26,7 +26,7 @@ plugins:
 
 resources:
   Resources:
-    appconfig-test-serverless:
+    appconfigtest:
       Type: AWS::AppConfig::Application
       Properties:
         Name: "appconfig"
