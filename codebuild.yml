@@ -1,15 +1,22 @@
-version: 0.1
+version: 0.2
 
+   
 phases:
-
-  install:
-
+  pre_build:
     commands:
-      - npm install
-      - npm install -g serverless
-      - npm install serverless-deployment-bucket 
-              
-  build:
-
+      - echo logging in to AWS ECR...
+      - aws --version
+      - $(aws ecr get-login --no-include-email --region ${AWS_DEFAULT_REGION})
+      - export AWS_ACCOUNT=$(aws sts get-caller-identity --output text --query Account)
+      #- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${ECR_URL}
+      - chmod +x tag.sh
+      - chmod +x push_ecr.sh
+  build:  
     commands:
-      - serverless deploy
+      - docker-compose build
+      - ./tag.sh
+      #- docker images | grep webapp
+         
+  post_build:
+    commands:
+      - ./push_ecr.sh
