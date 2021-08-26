@@ -18,7 +18,7 @@ export default function App() {
   };
   return (
     <div className="App">
-      <h1 className="App-header">Upload Json file</h1>
+      <h1 className="App-header">Upload Appconfig Json file</h1>
       <div className="App-container">
         <label htmlFor="file-upload" className="button custom-upload">
           Upload JSON
